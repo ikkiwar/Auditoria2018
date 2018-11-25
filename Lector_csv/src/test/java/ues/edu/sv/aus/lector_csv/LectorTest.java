@@ -120,8 +120,8 @@ public class LectorTest {
         String path = carpetaTemp.getRoot().getPath();
         Lector instance = new Lector();
         List<String> expResult = new ArrayList<>();
-        expResult.add(path + "/prueba.csv");
         expResult.add(path + "/prueba2.csv");
+        expResult.add(path + "/prueba.csv");
         List<String> result = instance.obtenerArchivos(path);
         assertEquals(expResult, result);
     }
