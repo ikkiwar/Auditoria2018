@@ -27,6 +27,8 @@ import org.junit.rules.TemporaryFolder;
  */
 public class LectorTest {
     
+    //esto es un coment
+    
    @Rule
     public TemporaryFolder carpetaTemp = new TemporaryFolder();
 

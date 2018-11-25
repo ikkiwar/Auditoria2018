@@ -20,7 +20,6 @@ import java.util.stream.Stream;
  */
 public class Lector {
     
-    //esto es un comentario
      public boolean verificarArchivo(final String path) {
         if (path != null && !path.trim().isEmpty()) {
             //Verifica que el path sea un archivo, tenga permisos de lectura y que no sea oculto
