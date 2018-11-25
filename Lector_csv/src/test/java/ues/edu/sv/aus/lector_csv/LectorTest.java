@@ -140,23 +140,18 @@ public class LectorTest {
         List<List<String>> expResult = new ArrayList<>();
         List<String> parse = new ArrayList<>();
         List<String> parse2 = new ArrayList<>();
-        List<String> parse3 = new ArrayList<>();
 
         String[] lista = {"1", "HP1", "12040.3334.080.0017", "Lenovo", "MJVZLKF",
             "ThinkCentre M82", "Lic Rina de Zometa", "Windows", "7.0 Professional SP 64 bits", "office pirata"};
         String[] lista2 = {"2", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
             "Vostron 220", "Lic Rina de Zometa",
             "Windows", "7.0 Professional SP 64 bits", "Office Original"};
-        String[] Lista3 = {"1", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
-            "Vostron 220", "Lic Rina de Zometa",
-            "Windows", "7.0 Professional SP 64 bits", "Office Original"};
+        
 
         parse.addAll(Arrays.asList(lista));
         parse2.addAll(Arrays.asList(lista2));
-        parse3.addAll(Arrays.asList(Lista3));
         expResult.add(0, parse);
         expResult.add(1, parse2);
-        expResult.add(2, parse3);
         List<String> path = instance.obtenerArchivos(paths);
         List<List<String>> result = instance.parser(path, saltarLinea, separador);
         assertEquals(expResult, result);
