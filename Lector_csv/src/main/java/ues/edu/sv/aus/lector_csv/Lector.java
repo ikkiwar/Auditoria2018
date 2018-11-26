@@ -18,6 +18,8 @@ import java.util.stream.Stream;
  *
  * @author kevin
  */
+
+//Probando---
 public class Lector {
     
      public boolean verificarArchivo(final String path) {
