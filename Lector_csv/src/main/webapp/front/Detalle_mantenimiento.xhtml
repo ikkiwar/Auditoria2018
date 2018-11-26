@@ -1,57 +1,76 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">      
     <h:head>
         <title>Detalle Mantenimiento</title>
     </h:head>
     <h:body>
-<!--        <p:dataTable var="detalle_mantenimiento" value="">
-            <p:column headerText="Id mantnimiento">
-                <h:outputText value="" />
-            </p:column>
+        <h:outputLabel value="Historial">HISTORIAL</h:outputLabel>
+        <h:form>
+            <p:dataTable var="detalle_mantenimiento" value="#{dtDetalle.lista}"
+                         emptyMessage="No hay ni mix...">
 
-            <p:column headerText="Historico">
-                <h:outputText value="" />
-            </p:column>
+                <p:column >
+                    <f:facet name="header">
+                        <p:outputLabel value="Nombre"/>
+                    </f:facet>
+                    <h:outputText value="#{detalle_mantenimiento.nombre}" />
+                </p:column>
+                <p:column >
+                    <f:facet name="header">
+                        <p:outputLabel value="Apellidos"/>
+                    </f:facet>
+                    <h:outputText value="#{detalle_mantenimiento.apellido}" />
+                </p:column>
 
-            <p:column headerText="N° inventario">
-                <h:outputText value="" />
-            </p:column>
-
-            <p:column headerText="marca">
-                <h:outputText value="" />
-            </p:column>
-
-            <p:column headerText="N° Serie">
-                <h:outputText value="" />
-            </p:column>
-
-            <p:column headerText="Modelo">
-                <h:outputText value="" />
-            </p:column>
-            
-              <p:column headerText="Responsable">
-        <h:outputText value="" />
-    </p:column>
-            
-              <p:column headerText="Sistema Operativo">
-        <h:outputText value="" />
-    </p:column>
-            
-              <p:column headerText="Version">
-        <h:outputText value="" />
-    </p:column>
-            
-              <p:column headerText="Observaciones">
-        <h:outputText value="" />
-    </p:column>
-            
-
-
-
-        </p:dataTable>
-        -->
+                <!--                            <p:column >
+                                                <f:facet name="header">
+                                                    <p:outputLabel value="Id mantnimiento"/>
+                                                </f:facet>
+                                                <h:outputText value="#{null}" />
+                                            </p:column>
+                                
+                                            <p:column headerText="Historico">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="N° inventario">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="marca">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="N° Serie">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="Modelo">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="Responsable">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="Sistema Operativo">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="Version">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>
+                                
+                                            <p:column headerText="Observaciones">
+                                                <h:outputText value="#{null}"/>
+                                            </p:column>-->
+            </p:dataTable>
+        </h:form>
     </h:body>
 </html>
 

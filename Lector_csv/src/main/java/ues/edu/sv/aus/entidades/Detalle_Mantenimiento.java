@@ -6,12 +6,18 @@
 package ues.edu.sv.aus.entidades;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.ViewScoped;
 
 /**
  *
  * @author kevin
  */
-public class Detalle_Mantenimiento implements Serializable{
+@ManagedBean(name = "dtDetalle")
+@ViewScoped
+public class Detalle_Mantenimiento implements Serializable {
 
     private int id_mantenimiento;
     private String historico;
@@ -23,6 +29,7 @@ public class Detalle_Mantenimiento implements Serializable{
     private String sistema_operativo;
     private String version;
     private String observaciones;
+    private List<Lista> lista;
 
     public Detalle_Mantenimiento() {
     }
@@ -106,7 +113,21 @@ public class Detalle_Mantenimiento implements Serializable{
     public void setObservaciones(String observaciones) {
         this.observaciones = observaciones;
     }
-    
-    
+
+    public List<Lista> getLita() {
+        List<Lista> algo = new ArrayList<>();
+        Lista item = new Lista();
+
+        for (int i = 0; i < 10; i++) {
+            item.setApellido("Apellido");
+            item.setNombre("Nombre");
+            algo.add(item);
+        }
+        return algo;
+    }
+
+    public void setLista(List<Lista> lista) {
+        this.lista = lista;
+    }
 
 }

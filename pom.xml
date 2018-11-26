@@ -11,5 +11,60 @@
     <modules>
         <module>Lector_csv</module>
     </modules>
+    
+        <build>
+        <plugins>
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <configuration>
+                    <dockerHost>https://168.61.16.53:2376</dockerHost>
+                    <certPath>/home/ikkiriko/ausfront</certPath>
+                    <useColor>true</useColor>
+                    <images>
+                        <image>
+                            <external>
+                                <type>compose</type>
+                                <basedir>./</basedir>
+                                <composeFile>docker-compose.yml</composeFile>
+                            </external>
+                        </image>
+                    </images>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>remove-containers</id>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                        <phase>pre-integration-test</phase>
+                    </execution>
+                    <execution>
+                        <id>build-image</id>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>stop</goal>
+                        </goals>
+                        <phase>pre-integration-test</phase>
+                    </execution>
+                    <execution>
+                        <id>run-image</id>
+                        <goals>
+                            <goal>start</goal>
+                        </goals>
+                        <phase>pre-integration-test</phase>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>Lector_csv</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>  
+    
 
 </project>
