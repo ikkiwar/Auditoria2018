@@ -5,11 +5,13 @@
  */
 package ues.edu.sv.aus.entidades;
 
+import java.io.Serializable;
+
 /**
  *
  * @author kevin
  */
-public class Detalle_Mantenimiento {
+public class Detalle_Mantenimiento implements Serializable{
 
     private int id_mantenimiento;
     private String historico;

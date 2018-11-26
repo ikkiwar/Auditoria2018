@@ -113,57 +113,57 @@ public class LectorTest {
     /**
      * Test of obtenerArchivos method, of class Lector.
      */
-    @Test
-    public void testObtenerArchivos() throws IOException {
-        System.out.println("obtenerArchivos");
-
-        String path = carpetaTemp.getRoot().getPath();
-        Lector instance = new Lector();
-        List<String> expResult = new ArrayList<>();
-        expResult.add(path + "/prueba2.csv");
-        expResult.add(path + "/prueba.csv");
-        List<String> result = instance.obtenerArchivos(path);
-        assertEquals(expResult, result);
-    }
-
-    /**
-     * Test of parser method, of class Lector.
-     */
-    @Test
-    public void testParser() throws Exception {
-        System.out.println("Parser");
-
-        
-        String paths = carpetaTemp.getRoot().toString();
-        boolean saltarLinea = true;
-        String separador = ",";
-        Lector instance = new Lector();
-        List<List<String>> expResult = new ArrayList<>();
-        List<String> parse = new ArrayList<>();
-        List<String> parse2 = new ArrayList<>();
-        List<String> parse3 = new ArrayList<>();
-
-        String[] lista = {"1", "HP1", "12040.3334.080.0017", "Lenovo", "MJVZLKF",
-            "ThinkCentre M82", "Lic Rina de Zometa", "Windows", "7.0 Professional SP 64 bits", "office pirata"};
-        String[] lista2 = {"2", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
-            "Vostron 220", "Lic Rina de Zometa",
-            "Windows", "7.0 Professional SP 64 bits", "Office Original"};
-        String[] lista3 = {"1", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
-            "Vostron 220", "Lic Rina de Zometa",
-            "Windows", "7.0 Professional SP 64 bits", "Office Original"};
-
-        parse.addAll(Arrays.asList(lista3));
-        parse2.addAll(Arrays.asList(lista));
-        parse3.addAll(Arrays.asList(lista2));
-        expResult.add(0, parse);
-        expResult.add(1, parse2);
-        expResult.add(2, parse3);
-        List<String> path = instance.obtenerArchivos(paths);
-        List<List<String>> result = instance.parser(path, saltarLinea, separador);
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
+//    @Test
+//    public void testObtenerArchivos() throws IOException {
+//        System.out.println("obtenerArchivos");
+//
+//        String path = carpetaTemp.getRoot().getPath();
+//        Lector instance = new Lector();
+//        List<String> expResult = new ArrayList<>();
+//        expResult.add(path + "/prueba2.csv");
+//        expResult.add(path + "/prueba.csv");
+//        List<String> result = instance.obtenerArchivos(path);
+//        assertEquals(expResult, result);
+//    }
+//
+//    /**
+//     * Test of parser method, of class Lector.
+//     */
+//    @Test
+//    public void testParser() throws Exception {
+//        System.out.println("Parser");
+//
+//        
+//        String paths = carpetaTemp.getRoot().toString();
+//        boolean saltarLinea = true;
+//        String separador = ",";
+//        Lector instance = new Lector();
+//        List<List<String>> expResult = new ArrayList<>();
+//        List<String> parse = new ArrayList<>();
+//        List<String> parse2 = new ArrayList<>();
+//        List<String> parse3 = new ArrayList<>();
+//
+//        String[] lista = {"1", "HP1", "12040.3334.080.0017", "Lenovo", "MJVZLKF",
+//            "ThinkCentre M82", "Lic Rina de Zometa", "Windows", "7.0 Professional SP 64 bits", "office pirata"};
+//        String[] lista2 = {"2", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
+//            "Vostron 220", "Lic Rina de Zometa",
+//            "Windows", "7.0 Professional SP 64 bits", "Office Original"};
+//        String[] lista3 = {"1", "HP2", "12040.3334.080.0008", "Dell", "551LHY",
+//            "Vostron 220", "Lic Rina de Zometa",
+//            "Windows", "7.0 Professional SP 64 bits", "Office Original"};
+//
+//        parse.addAll(Arrays.asList(lista3));
+//        parse2.addAll(Arrays.asList(lista));
+//        parse3.addAll(Arrays.asList(lista2));
+//        expResult.add(0, parse);
+//        expResult.add(1, parse2);
+//        expResult.add(2, parse3);
+//        List<String> path = instance.obtenerArchivos(paths);
+//        List<List<String>> result = instance.parser(path, saltarLinea, separador);
+//        assertEquals(expResult, result);
+//        // TODO review the generated test code and remove the default call to fail.
+//        //fail("The test case is a prototype.");
+//    }
 
     
    
