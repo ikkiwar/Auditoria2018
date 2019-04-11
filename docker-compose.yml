@@ -2,7 +2,7 @@ version: '2'
 
 services:
     payaramicro: 
-        image: 'payaramicro:auditoria'
+        image: payaramicro:auditoria
         build: Lector_csv/micropayara/.   
         container_name: 'ausDemo'       
         ports:
